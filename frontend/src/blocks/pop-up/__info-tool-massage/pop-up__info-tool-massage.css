@@ -1,0 +1,14 @@
+.pop-up__info-tool-massage {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin: 0 auto 60px;
+    max-width: 358px;
+    display: block;
+    font-weight: 900;
+}
+@media screen and (max-width: 600px) {
+    .pop-up__info-tool-massage {
+        margin-bottom: 50px;
+    }
+}

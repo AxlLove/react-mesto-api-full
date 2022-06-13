@@ -1,0 +1,5 @@
+.header__info-button_type_close {
+    background-image: url(../../../../images/CloseIcon.svg);
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,6 @@
+.places__text {
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 21px;
+}

@@ -1,0 +1,18 @@
+.header__info-button {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-image: url(../../../images/menu.png);
+    background-position: center;
+    background-size: cover;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.05s linear 0.1s;
+    padding: 0;
+    margin-right: 30px;
+    transition: 0.05s linear 0.1s;
+}
+.header__info-button:hover {
+    opacity: 0.6;
+}

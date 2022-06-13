@@ -1,0 +1,28 @@
+.header {
+  margin: 45px 200px 0;
+  border-bottom: 1px solid rgb(84, 84, 84, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+}
+@media screen and (max-width: 1140px) {
+  .header {
+    margin: 45px 140px 0;
+  }
+}
+@media screen and (max-width: 970px) {
+  .header {
+    margin: 45px 120px 0;
+  }
+}
+@media screen and (max-width: 860px) {
+  .header {
+    margin: 28px 40px 0;
+  }
+}
+@media screen and (max-width: 600px){
+  .header {
+    margin: 28px 0 0;
+  }
+}

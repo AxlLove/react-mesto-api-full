@@ -1,0 +1,14 @@
+.form__submit-button_type_register {
+    margin: 216px auto 15px;
+    color: black;
+    background-color: white;
+    display: block;
+}
+@media screen and (max-width: 600px) {
+    .form__submit-button_type_register {
+        margin-top: 187px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}

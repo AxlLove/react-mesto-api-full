@@ -1,0 +1,10 @@
+.places__item {
+  position: relative;
+  background-color: #fff;
+  padding: 0;
+  width: 282px;
+  display:flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
