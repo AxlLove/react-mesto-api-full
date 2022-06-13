@@ -23,11 +23,11 @@ app.use(express.json());
 
 mongoose.connect('mongodb://localhost:27017/mestodb');
 
+app.use(cors);
+
 app.use(helmet());
 
 app.use(requestLogger);
-
-app.use(cors);
 
 app.post('/signin', celebrate({
   body: Joi.object().keys({
