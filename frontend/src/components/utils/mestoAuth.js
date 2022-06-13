@@ -1,4 +1,4 @@
-export const BASE_URL = 'api.axlstar.mesto.nomoreparties.sbs';
+export const BASE_URL = 'https://api.axlstar.mesto.nomoreparties.sbs';
 
 const checkResponse = (response) => {
     console.log('response ok: ', response);
