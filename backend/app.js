@@ -13,6 +13,7 @@ require('dotenv').config();
 const { urlRegExp } = require('./utils/regExp');
 const { NotFoundError } = require('./errors/NotFoundError');
 const errorHandler = require('./middlewares/errorHandler');
+const cors = require('./middlewares/cors');
 
 const app = express();
 
@@ -25,6 +26,8 @@ mongoose.connect('mongodb://localhost:27017/mestodb');
 app.use(helmet());
 
 app.use(requestLogger);
+
+app.use(cors);
 
 app.post('/signin', celebrate({
   body: Joi.object().keys({
