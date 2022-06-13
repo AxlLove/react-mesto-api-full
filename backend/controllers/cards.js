@@ -8,7 +8,7 @@ const createCard = (req, res, next) => {
   if (!name || !link) {
     throw new ValidationError('Переданы некорректные данные при создании карточки.');
   }
-  const owner = req.user;
+  const owner = req.user.id;
   Card.create({ name, link, owner })
     .then((card) => res.send(card))
     .catch(
