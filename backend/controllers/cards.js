@@ -25,7 +25,7 @@ const createCard = (req, res, next) => {
 
 const getCards = (_, res, next) => {
   Card.find({})
-    .then((card) => res.send({ data: card }))
+    .then((card) => res.send(card))
     .catch((err) => next(err));
 };
 const deleteCard = (req, res, next) => {
