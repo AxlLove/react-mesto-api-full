@@ -137,7 +137,7 @@ function App() {
             mestoAuth.getContent(jwt)
                 .then(data=>{
                     console.log(data)
-             setUserEmail(data.data.email)
+             setUserEmail(data.email)
              setLoggedIn(true)
             })
             .catch(console.log)
