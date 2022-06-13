@@ -10,7 +10,7 @@ const createCard = (req, res, next) => {
   }
   const owner = req.user.id;
   Card.create({ name, link, owner })
-    .then((card) => res.send({ data: card }))
+    .then((card) => res.send(card))
     .catch(
       (err) => {
         if (err.name === 'ValidationError') {
@@ -41,7 +41,7 @@ const deleteCard = (req, res, next) => {
       return cardId;
     }).then((Id) => Card.findByIdAndRemove(Id)
       .then((card) => {
-        res.send({ data: card });
+        res.send(card);
       })).catch(
       (err) => {
         if (err.kind === 'ObjectId') {
@@ -65,7 +65,7 @@ const likeCard = (req, res, next) => {
       if (!card) {
         throw new NotFoundError('Карточка с указанным _id не найдена.');
       }
-      res.send({ data: card });
+      res.send(card);
     })
     .catch(
       (err) => {
@@ -90,7 +90,7 @@ const dislikeCard = (req, res, next) => {
       if (!card) {
         throw new NotFoundError('Карточка с указанным _id не найдена.');
       }
-      res.send({ data: card });
+      res.send(card);
     })
     .catch(
       (err) => {

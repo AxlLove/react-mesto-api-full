@@ -48,7 +48,7 @@ const getUser = (req, res, next) => {
       if (!user) {
         throw new NotFoundError('Пользователь по указанному _id не найден.');
       }
-      res.send({ data: user });
+      res.send(user);
     })
     .catch(
       (err) => {
@@ -63,7 +63,7 @@ const getUser = (req, res, next) => {
 
 const getUsers = (_, res, next) => {
   User.find({})
-    .then((user) => res.send({ data: user }))
+    .then((user) => res.send(user)
     .catch((err) => next(err));
 };
 
@@ -78,7 +78,7 @@ const updateProfile = (req, res, next) => {
       if (!updatedUser) {
         throw new NotFoundError('Пользователь по указанному _id не найден.');
       }
-      res.send({ data: updatedUser });
+      res.send(user);
     })
     .catch(
       (err) => {
@@ -103,7 +103,7 @@ const updateAvatar = (req, res, next) => {
       if (!updatedUser) {
         throw new NotFoundError('Пользователь по указанному _id не найден.');
       }
-      res.send({ data: updatedUser });
+      res.send(user);
     })
     .catch(
       (err) => {
@@ -153,7 +153,7 @@ const getCurrentUser = (req, res, next) => {
       if (!user) {
         throw new NotFoundError('Пользователь по указанному _id не найден.');
       }
-      res.send({ data: user });
+      res.send(user);
     })
     .catch(
       (err) => {
