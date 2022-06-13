@@ -4,6 +4,7 @@ const process = require('process');
 const { errors } = require('celebrate');
 const { celebrate, Joi } = require('celebrate');
 const helmet = require('helmet');
+const cors = require('cors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const userRouter = require('./routes/users');
 const cardRouter = require('./routes/cards');
@@ -13,7 +14,6 @@ require('dotenv').config();
 const { urlRegExp } = require('./utils/regExp');
 const { NotFoundError } = require('./errors/NotFoundError');
 const errorHandler = require('./middlewares/errorHandler');
-const cors = require('./middlewares/cors');
 
 const app = express();
 
@@ -23,7 +23,7 @@ app.use(express.json());
 
 mongoose.connect('mongodb://localhost:27017/mestodb');
 
-app.use(cors);
+app.use(cors());
 
 app.use(helmet());
 
