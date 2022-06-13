@@ -82,6 +82,6 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: 'api.axlstar.mesto.nomoreparties.sbs',
+  baseUrl: 'https://api.axlstar.mesto.nomoreparties.sbs',
 });
 
