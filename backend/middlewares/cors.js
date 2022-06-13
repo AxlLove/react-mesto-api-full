@@ -1,5 +1,6 @@
 const allowedCors = [
-  'axlstar.mesto.nomoredomains.xyz',
+  'https://api.axlstar.mesto.nomoreparties.sbs',
+  'http://api.axlstar.mesto.nomoreparties.sbs',
 ];
 
 module.exports = (req, res, next) => {
