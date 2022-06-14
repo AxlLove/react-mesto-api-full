@@ -136,7 +136,6 @@ function App() {
             const jwt = localStorage.getItem("jwt")
             mestoAuth.getContent(jwt)
                 .then(data=>{
-                    console.log(data)
              setUserEmail(data.email)
              setLoggedIn(true)
             })
