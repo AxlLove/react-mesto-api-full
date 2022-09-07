@@ -12,7 +12,6 @@ const Register = ({ handleRegister}) => {
             ...prev,
                 [name]:value,
         }))
-
     }
     const handleSubmit = (e) => {
       e.preventDefault()
